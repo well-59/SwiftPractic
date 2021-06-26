@@ -14,10 +14,12 @@ class RestaurantTableViewController: UITableViewController {
         "Bourke Street Bakery","Haigh's Chocolate","Palomino Espresso","Upstate","Traif","Graham Avenue Meats And Deli","Waffle & Wolf","Five Leaves","Cafe Lore","Confessional","Barrafina","Donostia",
         "Royal Oak","CASK Pub and Kitchen"]
     var restaurantImages = ["cafedeadend","homei","teakha","cafeloisl","petiteoyster","forkeerestaurant","posatelier","bourkestreetbakery","haighschocolate","palominoespresso","upstate","traif","grahamavenuemeats","wafflewolf","fiveleaves","cafelore","confessional","barrafina","donostia","royaloak","caskpubkitchen"]
+    var restaurantLocations = ["Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Sydny","Sydny","Sydny","New York","New York","New York","New York","New York","New York","New York","London","London","London","London"]
+    var restaurandTypes = ["Coffee & Tea Shop","Cafe","Tea House","Austrian / Causual Drink","French","Bakery","Bakery","Chocolate","Cafe","American / Seafood","American","American","Breakfast & Brunch","Coffee & Tea","Latin American","Spanish","Spanish","Spanish","British","Thao"]
     var snapshot = NSDiffableDataSourceSnapshot<Section,String>()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.separatorStyle = .none
         tableView.dataSource = dataSource
         
         var snapshot = NSDiffableDataSourceSnapshot<Section,String>()
@@ -34,9 +36,14 @@ class RestaurantTableViewController: UITableViewController {
         let dataSource = UITableViewDiffableDataSource< Section, String>(
             tableView: tableView,
             cellProvider:{ tableview,indexPath,restaurantName in
-                let cell = tableview.dequeueReusableCell(withIdentifier:cellIdentifier,for:indexPath)
-                cell.textLabel?.text = restaurantName
-                cell.imageView?.image = UIImage(named: self.restaurantImages[indexPath.row])
+                let cell = tableview.dequeueReusableCell(withIdentifier:cellIdentifier,for:indexPath) as! RestaurantTableViewCell
+                
+                cell.nameLabel.text = self.restaurantNames[indexPath.row]
+                
+                cell.thumbnailImageView.image = UIImage(named: self.restaurantImages[indexPath.row])
+                
+                cell.typeLabel.text = self.restaurandTypes[indexPath.row]
+                cell.locationLabel.text = self.restaurantLocations[indexPath.row]
                 return cell
             }
         )

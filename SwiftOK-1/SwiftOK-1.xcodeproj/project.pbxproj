@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F9F902CF2685B0850052C3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F902CE2685B0850052C3E1 /* AppDelegate.swift */; };
-		F9F902D12685B0850052C3E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F902D02685B0850052C3E1 /* SceneDelegate.swift */; };
-		F9F902D62685B0850052C3E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F902D42685B0850052C3E1 /* Main.storyboard */; };
-		F9F902D82685B0860052C3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F902D72685B0860052C3E1 /* Assets.xcassets */; };
-		F9F902DB2685B0860052C3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F902D92685B0860052C3E1 /* LaunchScreen.storyboard */; };
-		F9F902E52685B55F0052C3E1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F902E42685B55F0052C3E1 /* RestaurantTableViewController.swift */; };
-		F9F903072686F0EA0052C3E1 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F903062686F0EA0052C3E1 /* RestaurantTableViewCell.swift */; };
+		F9F902F32685DA8F0052C3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F902F22685DA8F0052C3E1 /* AppDelegate.swift */; };
+		F9F902F52685DA8F0052C3E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F902F42685DA8F0052C3E1 /* SceneDelegate.swift */; };
+		F9F902FA2685DA8F0052C3E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F902F82685DA8F0052C3E1 /* Main.storyboard */; };
+		F9F902FC2685DA920052C3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F902FB2685DA920052C3E1 /* Assets.xcassets */; };
+		F9F902FF2685DA920052C3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F902FD2685DA920052C3E1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F9F902CB2685B0850052C3E1 /* Foodpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9F902CE2685B0850052C3E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9F902D02685B0850052C3E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9F902D52685B0850052C3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F9F902D72685B0860052C3E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F9F902DA2685B0860052C3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F9F902DC2685B0860052C3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9F902E42685B55F0052C3E1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
-		F9F903062686F0EA0052C3E1 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		F9F902EF2685DA8F0052C3E1 /* SwiftOK-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftOK-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F902F22685DA8F0052C3E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9F902F42685DA8F0052C3E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F9F902F92685DA8F0052C3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9F902FB2685DA920052C3E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9F902FE2685DA920052C3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9F903002685DA920052C3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F9F902C82685B0850052C3E1 /* Frameworks */ = {
+		F9F902EC2685DA8F0052C3E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,72 +35,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F9F902C22685B0850052C3E1 = {
+		F9F902E62685DA8F0052C3E1 = {
 			isa = PBXGroup;
 			children = (
-				F9F902CD2685B0850052C3E1 /* Foodpin */,
-				F9F902CC2685B0850052C3E1 /* Products */,
+				F9F902F12685DA8F0052C3E1 /* SwiftOK-1 */,
+				F9F902F02685DA8F0052C3E1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F9F902CC2685B0850052C3E1 /* Products */ = {
+		F9F902F02685DA8F0052C3E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9F902CB2685B0850052C3E1 /* Foodpin.app */,
+				F9F902EF2685DA8F0052C3E1 /* SwiftOK-1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9F902CD2685B0850052C3E1 /* Foodpin */ = {
+		F9F902F12685DA8F0052C3E1 /* SwiftOK-1 */ = {
 			isa = PBXGroup;
 			children = (
-				F9F902CE2685B0850052C3E1 /* AppDelegate.swift */,
-				F9F902D02685B0850052C3E1 /* SceneDelegate.swift */,
-				F9F902D42685B0850052C3E1 /* Main.storyboard */,
-				F9F902D72685B0860052C3E1 /* Assets.xcassets */,
-				F9F902D92685B0860052C3E1 /* LaunchScreen.storyboard */,
-				F9F902DC2685B0860052C3E1 /* Info.plist */,
-				F9F902E42685B55F0052C3E1 /* RestaurantTableViewController.swift */,
-				F9F903062686F0EA0052C3E1 /* RestaurantTableViewCell.swift */,
+				F9F902F22685DA8F0052C3E1 /* AppDelegate.swift */,
+				F9F902F42685DA8F0052C3E1 /* SceneDelegate.swift */,
+				F9F902F82685DA8F0052C3E1 /* Main.storyboard */,
+				F9F902FB2685DA920052C3E1 /* Assets.xcassets */,
+				F9F902FD2685DA920052C3E1 /* LaunchScreen.storyboard */,
+				F9F903002685DA920052C3E1 /* Info.plist */,
 			);
-			path = Foodpin;
+			path = "SwiftOK-1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F9F902CA2685B0850052C3E1 /* Foodpin */ = {
+		F9F902EE2685DA8F0052C3E1 /* SwiftOK-1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9F902DF2685B0860052C3E1 /* Build configuration list for PBXNativeTarget "Foodpin" */;
+			buildConfigurationList = F9F903032685DA920052C3E1 /* Build configuration list for PBXNativeTarget "SwiftOK-1" */;
 			buildPhases = (
-				F9F902C72685B0850052C3E1 /* Sources */,
-				F9F902C82685B0850052C3E1 /* Frameworks */,
-				F9F902C92685B0850052C3E1 /* Resources */,
+				F9F902EB2685DA8F0052C3E1 /* Sources */,
+				F9F902EC2685DA8F0052C3E1 /* Frameworks */,
+				F9F902ED2685DA8F0052C3E1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Foodpin;
-			productName = Foodpin;
-			productReference = F9F902CB2685B0850052C3E1 /* Foodpin.app */;
+			name = "SwiftOK-1";
+			productName = "SwiftOK-1";
+			productReference = F9F902EF2685DA8F0052C3E1 /* SwiftOK-1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F9F902C32685B0850052C3E1 /* Project object */ = {
+		F9F902E72685DA8F0052C3E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					F9F902CA2685B0850052C3E1 = {
+					F9F902EE2685DA8F0052C3E1 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = F9F902C62685B0850052C3E1 /* Build configuration list for PBXProject "Foodpin" */;
+			buildConfigurationList = F9F902EA2685DA8F0052C3E1 /* Build configuration list for PBXProject "SwiftOK-1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,56 +106,54 @@
 				en,
 				Base,
 			);
-			mainGroup = F9F902C22685B0850052C3E1;
-			productRefGroup = F9F902CC2685B0850052C3E1 /* Products */;
+			mainGroup = F9F902E62685DA8F0052C3E1;
+			productRefGroup = F9F902F02685DA8F0052C3E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9F902CA2685B0850052C3E1 /* Foodpin */,
+				F9F902EE2685DA8F0052C3E1 /* SwiftOK-1 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F9F902C92685B0850052C3E1 /* Resources */ = {
+		F9F902ED2685DA8F0052C3E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9F902DB2685B0860052C3E1 /* LaunchScreen.storyboard in Resources */,
-				F9F902D82685B0860052C3E1 /* Assets.xcassets in Resources */,
-				F9F902D62685B0850052C3E1 /* Main.storyboard in Resources */,
+				F9F902FF2685DA920052C3E1 /* LaunchScreen.storyboard in Resources */,
+				F9F902FC2685DA920052C3E1 /* Assets.xcassets in Resources */,
+				F9F902FA2685DA8F0052C3E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F9F902C72685B0850052C3E1 /* Sources */ = {
+		F9F902EB2685DA8F0052C3E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9F903072686F0EA0052C3E1 /* RestaurantTableViewCell.swift in Sources */,
-				F9F902CF2685B0850052C3E1 /* AppDelegate.swift in Sources */,
-				F9F902D12685B0850052C3E1 /* SceneDelegate.swift in Sources */,
-				F9F902E52685B55F0052C3E1 /* RestaurantTableViewController.swift in Sources */,
+				F9F902F32685DA8F0052C3E1 /* AppDelegate.swift in Sources */,
+				F9F902F52685DA8F0052C3E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F9F902D42685B0850052C3E1 /* Main.storyboard */ = {
+		F9F902F82685DA8F0052C3E1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F9F902D52685B0850052C3E1 /* Base */,
+				F9F902F92685DA8F0052C3E1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F9F902D92685B0860052C3E1 /* LaunchScreen.storyboard */ = {
+		F9F902FD2685DA920052C3E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F9F902DA2685B0860052C3E1 /* Base */,
+				F9F902FE2685DA920052C3E1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -169,7 +161,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F9F902DD2685B0860052C3E1 /* Debug */ = {
+		F9F903012685DA920052C3E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		F9F902DE2685B0860052C3E1 /* Release */ = {
+		F9F903022685DA920052C3E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,36 +277,36 @@
 			};
 			name = Release;
 		};
-		F9F902E02685B0860052C3E1 /* Debug */ = {
+		F9F903042685DA920052C3E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Foodpin/Info.plist;
+				INFOPLIST_FILE = "SwiftOK-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = well.Foodpin;
+				PRODUCT_BUNDLE_IDENTIFIER = "well.SwiftOK-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F9F902E12685B0860052C3E1 /* Release */ = {
+		F9F903052685DA920052C3E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Foodpin/Info.plist;
+				INFOPLIST_FILE = "SwiftOK-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = well.Foodpin;
+				PRODUCT_BUNDLE_IDENTIFIER = "well.SwiftOK-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,25 +316,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9F902C62685B0850052C3E1 /* Build configuration list for PBXProject "Foodpin" */ = {
+		F9F902EA2685DA8F0052C3E1 /* Build configuration list for PBXProject "SwiftOK-1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9F902DD2685B0860052C3E1 /* Debug */,
-				F9F902DE2685B0860052C3E1 /* Release */,
+				F9F903012685DA920052C3E1 /* Debug */,
+				F9F903022685DA920052C3E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9F902DF2685B0860052C3E1 /* Build configuration list for PBXNativeTarget "Foodpin" */ = {
+		F9F903032685DA920052C3E1 /* Build configuration list for PBXNativeTarget "SwiftOK-1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9F902E02685B0860052C3E1 /* Debug */,
-				F9F902E12685B0860052C3E1 /* Release */,
+				F9F903042685DA920052C3E1 /* Debug */,
+				F9F903052685DA920052C3E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F9F902C32685B0850052C3E1 /* Project object */;
+	rootObject = F9F902E72685DA8F0052C3E1 /* Project object */;
 }

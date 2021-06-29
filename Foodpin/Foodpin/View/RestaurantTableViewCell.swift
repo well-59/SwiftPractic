@@ -17,8 +17,8 @@ class RestaurantTableViewCell: UITableViewCell {
             thumbnailImageView.layer.cornerRadius = 20.0
             thumbnailImageView.clipsToBounds = true
         }
-        
     }
+    @IBOutlet var heartImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

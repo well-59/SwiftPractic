@@ -18,7 +18,7 @@ class RestaurantTableViewCell: UITableViewCell {
             thumbnailImageView.clipsToBounds = true
         }
     }
-    @IBOutlet var heartImageView: UIImageView!
+    @IBOutlet var favoriteImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

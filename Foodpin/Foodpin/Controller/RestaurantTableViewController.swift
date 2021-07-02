@@ -8,16 +8,16 @@
 import UIKit
 
 class RestaurantTableViewController: UITableViewController {
-    lazy var dataSource = configureDataSource()
-    var restaruantISFavorites = Array(repeating: false, count: 21)
-
-    struct Restaurant: Hashable{
-        var name: String = ""
-        var type: String = ""
-        var location: String = ""
-        var image : String = ""
-        var isFavorite:Bool = false
-    }
+//    lazy var dataSource = configureDataSource()
+//    var restaruantISFavorites = Array(repeating: false, count: 21)
+//
+//    struct Restaurant: Hashable{
+//        var name: String = ""
+//        var type: String = ""
+//        var location: String = ""
+//        var image : String = ""
+//        var isFavorite:Bool = false
+//    }
     // MARK: - Properties
     var restaurants:[Restaurant] = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", image: "cafedeadend", isFavorite:false),
@@ -42,23 +42,24 @@ class RestaurantTableViewController: UITableViewController {
         Restaurant(name: "Royal Oak", type: "British", location: "London", image: "royaloak", isFavorite: false),
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London", image: "caskpubkitchen", isFavorite: false)
     ]
-    var snapshot = NSDiffableDataSourceSnapshot<Section,String>()
+    // MARK: - View controller life cycle
+//    var snapshot = NSDiffableDataSourceSnapshot<Section,String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.separatorStyle = .none
-        tableView.dataSource = dataSource
+//        tableView.separatorStyle = .none
+//        tableView.dataSource = dataSource
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
         var snapshot = NSDiffableDataSourceSnapshot<Section,Restaurant>()
         snapshot.appendSections([.all])
         snapshot.appendItems(restaurants,toSection: .all)
-        
-        dataSource.apply(snapshot,animatingDifferences: false)
-        
+//
+//        dataSource.apply(snapshot,animatingDifferences: false)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+    // MARK: - Table view data source
     override func tableView(_ tableView:UITableView,didSelectRowAt indexPath:IndexPath){
         
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
@@ -100,72 +101,72 @@ class RestaurantTableViewController: UITableViewController {
         tableView.deselectRow(at:indexPath,animated: false)
     }
     
-    override func tableView(_ tableView:UITableView, trailingSwipeActionsConfigurationForRowAt indexPath:IndexPath) -> UISwipeActionsConfiguration{
-        //取得餐廳
-        guard let restaurant = self.dataSource.itemIdentifier(for: indexPath)
-        else{
-            return UISwipeActionsConfiguration()
-        }
-        
-        //刪除動作
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action,sourceView,completionHandler) in
-            
-            var snapshot = self.dataSource.snapshot()
-            snapshot.deleteItems([restaurant])
-            self.dataSource.apply(snapshot,animatingDifferences: true)
-            
-            //呼交完成處理器來取消動作按鈕
-            completionHandler(true)
-        }
-        
-        //分享動作
-        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action,sourceView,completionHandler) in
-            let defaultText = "Just checking in at " + restaurant.name
-            
-            var activityController : UIActivityViewController
-            
-            if let imageToShare = UIImage(named: restaurant.image){
-                activityController = UIActivityViewController(activityItems: [defaultText,imageToShare], applicationActivities: nil)
-            }else {
-                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-            }
-            if let popoverController = activityController.popoverPresentationController {
-                if let cell = tableView.cellForRow(at: indexPath) {
-                    popoverController.sourceView = cell
-                    popoverController.sourceRect = cell.bounds
-                }
-            }
-            self.present(activityController,animated:true,completion:nil)
-            completionHandler(true)
-            
-        }
-        
-        //設定兩個動作為滑動
-        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
-        return swipeConfiguration
-        
-    }
+//    override func tableView(_ tableView:UITableView, trailingSwipeActionsConfigurationForRowAt indexPath:IndexPath) -> UISwipeActionsConfiguration{
+//        //取得餐廳
+//        guard let restaurant = self.dataSource.itemIdentifier(for: indexPath)
+//        else{
+//            return UISwipeActionsConfiguration()
+//        }
+//        
+//        //刪除動作
+//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action,sourceView,completionHandler) in
+//            
+//            var snapshot = self.dataSource.snapshot()
+//            snapshot.deleteItems([restaurant])
+//            self.dataSource.apply(snapshot,animatingDifferences: true)
+//            
+//            //呼交完成處理器來取消動作按鈕
+//            completionHandler(true)
+//        }
+//        
+//        //分享動作
+//        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action,sourceView,completionHandler) in
+//            let defaultText = "Just checking in at " + restaurant.name
+//            
+//            var activityController : UIActivityViewController
+//            
+//            if let imageToShare = UIImage(named: restaurant.image){
+//                activityController = UIActivityViewController(activityItems: [defaultText,imageToShare], applicationActivities: nil)
+//            }else {
+//                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+//            }
+//            if let popoverController = activityController.popoverPresentationController {
+//                if let cell = tableView.cellForRow(at: indexPath) {
+//                    popoverController.sourceView = cell
+//                    popoverController.sourceRect = cell.bounds
+//                }
+//            }
+//            self.present(activityController,animated:true,completion:nil)
+//            completionHandler(true)
+//            
+//        }
+//        
+//        //設定兩個動作為滑動
+//        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
+//        return swipeConfiguration
+//        
+//    }
     
-    func configureDataSource() -> UITableViewDiffableDataSource<Section, Restaurant >{
-
-        let cellIdentifier = "datacell"
-
-        let dataSource = RestaurantDiffableDataSource(
-            tableView: tableView,
-            cellProvider:{ tableview,indexPath,restaurant in
-                let cell = tableview.dequeueReusableCell(withIdentifier: cellIdentifier,for: indexPath) as! RestaurantTableViewCell
-
-                cell.nameLabel.text = restaurant.name
-                cell.locationLabel.text = restaurant.location
-                cell.typeLabel.text = restaurant.type
-                cell.thumbnailImageView.image = UIImage(named: restaurant.image)
-                cell.favoriteImageView.isHidden = restaurant.isFavorite ? false : true
-                return cell
-
-            }
-        )
-        return dataSource
-    }
+//    func configureDataSource() -> UITableViewDiffableDataSource<Section, Restaurant >{
+//
+//        let cellIdentifier = "datacell"
+//
+//        let dataSource = RestaurantDiffableDataSource(
+//            tableView: tableView,
+//            cellProvider:{ tableview,indexPath,restaurant in
+//                let cell = tableview.dequeueReusableCell(withIdentifier: cellIdentifier,for: indexPath) as! RestaurantTableViewCell
+//
+//                cell.nameLabel.text = restaurant.name
+//                cell.locationLabel.text = restaurant.location
+//                cell.typeLabel.text = restaurant.type
+//                cell.thumbnailImageView.image = UIImage(named: restaurant.image)
+//                cell.favoriteImageView.isHidden = restaurant.isFavorite ? false : true
+//                return cell
+//
+//            }
+//        )
+//        return dataSource
+//    }
     
     
 }

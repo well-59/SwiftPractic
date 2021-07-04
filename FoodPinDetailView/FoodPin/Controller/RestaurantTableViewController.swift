@@ -42,6 +42,27 @@ class RestaurantTableViewController: UITableViewController {
         
         // Set to use the large title of the navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationItem.backButtonTitle = ""
+//        navigationController?.hidesBarsOnSwipe = true
+        
+        
+        //導覽列
+        if let appearance = navigationController?.navigationBar.standardAppearance{
+            
+            appearance.configureWithTransparentBackground()
+            
+            if let customFont = UIFont(name: "Nunito-Bold", size: 45.0){
+                
+                appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!]
+                appearance.largeTitleTextAttributes = [.foregroundColor:UIColor(named: "NavigationBarTitle")!, .font:customFont]
+            }
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        }
+        
+        
     }
 
     // MARK: - Table view data source
@@ -151,5 +172,9 @@ class RestaurantTableViewController: UITableViewController {
         }
     }
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+    }
 }

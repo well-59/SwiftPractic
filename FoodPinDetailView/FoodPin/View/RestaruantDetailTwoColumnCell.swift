@@ -1,15 +1,15 @@
 //
-//  RestaurantDetailTwoCoumnCell.swift
+//  RestaruantDetailTwoColumnCell.swift
 //  FoodPin
 //
-//  Created by 黃士豪 on 2021/7/1.
+//  Created by 黃士豪 on 2021/7/2.
 //  Copyright © 2021 AppCoda. All rights reserved.
 //
 
 import UIKit
 
-class RestaurantDetailTwoCoumnCell: UITableViewCell {
-    
+class RestaruantDetailTwoColumnCell: UITableViewCell {
+
     @IBOutlet var column1TitleLabel:UILabel!{
         didSet {
             column1TitleLabel.text = column1TitleLabel.text?.uppercased()
@@ -18,7 +18,7 @@ class RestaurantDetailTwoCoumnCell: UITableViewCell {
     }
     @IBOutlet var column1TextLabel:UILabel!{
         didSet {
-            column1TitleLabel.numberOfLines = 0
+            column1TextLabel.numberOfLines = 0
         }
     }
     @IBOutlet var column2TitleLabelL:UILabel!{
@@ -33,7 +33,6 @@ class RestaurantDetailTwoCoumnCell: UITableViewCell {
         }
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -46,3 +45,4 @@ class RestaurantDetailTwoCoumnCell: UITableViewCell {
     }
 
 }
+

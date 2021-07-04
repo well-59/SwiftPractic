@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "haighschocolate.jpg",
+      "filename" : "happy.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "haighschocolate@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "haighschocolate@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

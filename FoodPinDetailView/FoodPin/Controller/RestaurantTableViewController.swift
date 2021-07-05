@@ -43,7 +43,7 @@ class RestaurantTableViewController: UITableViewController {
         // Set to use the large title of the navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        navigationItem.backButtonTitle = ""
+//        navigationItem.backButtonTitle = ""
 //        navigationController?.hidesBarsOnSwipe = true
         
         
@@ -176,5 +176,8 @@ class RestaurantTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = true
+    }
+    @IBAction func unwindToHome(segue: UIStoryboardSegue){
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -128,7 +128,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: {
             if let rating = segue.identifier {
-                self.restaurant.rating = rating
+                self.restaurant.rating = Restaurant.Rating(rawValue: rating)
                 self.headerView.ratingImageView.image = UIImage(named: rating)
                 
                 let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)

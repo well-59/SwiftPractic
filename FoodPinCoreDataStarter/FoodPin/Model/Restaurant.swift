@@ -20,7 +20,7 @@ public class Restaurant: NSManagedObject {
  @NSManaged public    var summary: String
  @NSManaged public    var image: String
  @NSManaged public    var ratingText: String?
- @NSManaged public    var isFavorite: Bool
+ @NSManaged public    var isVisited: Bool
 }
 
 extension Restaurant{

@@ -33,6 +33,7 @@ class WalkthroughViewController: UIViewController {
     
     @IBAction func skipButtonTapped(sender: UIButton){
         UserDefaults.standard.set(true,forKey:"hasViewedWalkthrough")
+        createQuickActions()
         dismiss(animated: true, completion: nil)
     }
     
@@ -43,6 +44,7 @@ class WalkthroughViewController: UIViewController {
                 WalkthroughPageViewController?.forwardPage()
             case 2:
                 UserDefaults.standard.set(true,forKey:"hasViewedWalkthrough")
+                createQuickActions()
                 dismiss(animated: true, completion: nil)
             default:
                 break
@@ -72,6 +74,18 @@ class WalkthroughViewController: UIViewController {
         if let pageViewController = destination as? WalkthroughPageViewController {
             WalkthroughPageViewController = pageViewController
             WalkthroughPageViewController?.walkthroughDelegate = self
+        }
+    }
+    func createQuickActions(){
+        //加入快速動作
+        if let bundleIdentifier = Bundle.main.bundleIdentifier{
+            let shortcutIteml = UIApplicationShortcutItem(type:"\(bundleIdentifier).OpenFavorites",
+                localizedTitle: "Show Favorites",localizedSubtitle: nil, icon: UIApplicationShortcutIcon(systemImageName:"tag"),userInfo: nil)
+            let shortcutItem2 = UIApplicationShortcutItem(type:"\(bundleIdentifier).OpenDiscover",
+            localizedTitle: "Discover Restaurants",localizedSubtitle: nil, icon: UIApplicationShortcutIcon(systemImageName:"eyes"),userInfo: nil)
+            let shortcutItem3 = UIApplicationShortcutItem(type:"\(bundleIdentifier).NewRestaurant",
+                localizedTitle: "New Restaurant",localizedSubtitle: nil, icon: UIApplicationShortcutIcon(type:.add),userInfo: nil)
+            UIApplication.shared.shortcutItems = [shortcutIteml,shortcutItem2,shortcutItem3]
         }
     }
 }

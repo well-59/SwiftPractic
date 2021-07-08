@@ -187,6 +187,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkInAction])
         
+        
+        
+        
+        
         return swipeConfiguration
     }
     
@@ -197,8 +201,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
                 destinationController.restaurant = restaurants[indexPath.row]
+                destinationController.hidesBottomBarWhenPushed = true
             }
         }
+        
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {

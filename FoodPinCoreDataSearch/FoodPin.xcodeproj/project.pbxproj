@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61DE9F592696A7B300269E38 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE9F582696A7B300269E38 /* AboutTableViewController.swift */; };
+		61DE9F5D2696D13000269E38 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE9F5C2696D13000269E38 /* WebViewController.swift */; };
+		61DE9F5F2696D7E500269E38 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE9F5E2696D7E500269E38 /* WebKit.framework */; };
 		61E66F6B26955C3500F2BC2E /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E66F6A26955C3500F2BC2E /* Onboarding.storyboard */; };
 		61E66F6D269571E500F2BC2E /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E66F6C269571E500F2BC2E /* WalkthroughContentViewController.swift */; };
 		61E66F6F269576BA00F2BC2E /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E66F6E269576BA00F2BC2E /* WalkthroughPageViewController.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61DE9F582696A7B300269E38 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		61DE9F5C2696D13000269E38 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		61DE9F5E2696D7E500269E38 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		61E66F6A26955C3500F2BC2E /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		61E66F6C269571E500F2BC2E /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		61E66F6E269576BA00F2BC2E /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DE9F5F2696D7E500269E38 /* WebKit.framework in Frameworks */,
 				F42DF0991F6BDD850078DA7D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +116,7 @@
 		F42DF0971F6BDD850078DA7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61DE9F5E2696D7E500269E38 /* WebKit.framework */,
 				F42DF0981F6BDD850078DA7D /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -125,6 +133,8 @@
 				61E66F6C269571E500F2BC2E /* WalkthroughContentViewController.swift */,
 				61E66F6E269576BA00F2BC2E /* WalkthroughPageViewController.swift */,
 				61E66F70269580B000F2BC2E /* WalkthroughViewController.swift */,
+				61DE9F582696A7B300269E38 /* AboutTableViewController.swift */,
+				61DE9F5C2696D13000269E38 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40AF4A21F6278B400943F02 /* RestaurantDetailHeaderView.swift in Sources */,
+				61DE9F5D2696D13000269E38 /* WebViewController.swift in Sources */,
 				F4A0586C1F58FBE400D6288C /* Restaurant.swift in Sources */,
 				F478B68C1F72C7C2009A5F2A /* ReviewViewController.swift in Sources */,
 				F401D3061F6E5F3E0046CB51 /* RestaurantDetailMapCell.swift in Sources */,
@@ -320,6 +331,7 @@
 				F401D3081F6EDBFA0046CB51 /* MapViewController.swift in Sources */,
 				61E66F71269580B000F2BC2E /* WalkthroughViewController.swift in Sources */,
 				F4E705EE1F63930B00635504 /* RestaurantDetailIconTextCell.swift in Sources */,
+				61DE9F592696A7B300269E38 /* AboutTableViewController.swift in Sources */,
 				F40BFF971F68FF2A00A6209F /* UINavigationController+Ext.swift in Sources */,
 				F40BFF951F68EAAA00A6209F /* UIColor+Ext.swift in Sources */,
 				F4A0586A1F58165D00D6288C /* RestaurantDetailViewController.swift in Sources */,
@@ -402,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -453,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
